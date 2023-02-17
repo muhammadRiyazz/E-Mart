@@ -20,7 +20,7 @@ class TitlePaer extends StatelessWidget {
           ),
         ),
         const Text(
-          ' E-',
+          '  E- ',
           style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.w700,
