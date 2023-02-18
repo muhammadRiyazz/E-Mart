@@ -23,7 +23,8 @@ class ButtonPart extends StatelessWidget {
               height: double.maxFinite,
               width: .6 * msize.width,
               decoration: BoxDecoration(
-                border: Border.all(color: cdark),
+                color: cblack,
+                // border: Border.all(color: cdark),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Row(
@@ -32,7 +33,7 @@ class ButtonPart extends StatelessWidget {
                     Text(
                       'Buy Now',
                       style: TextStyle(
-                          color: cblack,
+                          color: cwhite,
                           fontWeight: FontWeight.w500,
                           fontSize: 18),
                     ),
@@ -41,7 +42,7 @@ class ButtonPart extends StatelessWidget {
                     ),
                     Icon(
                       Icons.shopping_bag_outlined,
-                      color: cblack,
+                      color: cwhite,
                       size: 27,
                     )
                   ]),

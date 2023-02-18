@@ -54,7 +54,7 @@ class LastButtonPart extends StatelessWidget {
               child: Container(
                 height: double.maxFinite,
                 decoration: BoxDecoration(
-                    color: cdark, borderRadius: BorderRadius.circular(18)),
+                    color: cblack, borderRadius: BorderRadius.circular(18)),
                 child: Center(
                   child: Text(
                     'Checkout',

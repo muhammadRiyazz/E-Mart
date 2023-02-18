@@ -2,6 +2,7 @@ import 'package:emart/core/constands/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:simple_shadow/simple_shadow.dart';
 
 class CategoryPart extends StatefulWidget {
   const CategoryPart({super.key});
@@ -26,37 +27,40 @@ class _CategoryPartState extends State<CategoryPart> {
           children: [
             InkWell(
               onTap: () {},
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 3,
-                  horizontal: 18,
-                ),
-                decoration: BoxDecoration(
-                    color: cwhite, borderRadius: BorderRadius.circular(10)),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5),
-                      child: SizedBox(
-                        height: 40,
-                        width: 40,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(
-                            'lib/assets/pngegg.png',
-                            fit: BoxFit.fill,
+              child: SimpleShadow(
+                opacity: 0.2,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 3,
+                    horizontal: 18,
+                  ),
+                  decoration: BoxDecoration(
+                      color: cwhite, borderRadius: BorderRadius.circular(10)),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 5),
+                        child: SizedBox(
+                          height: 40,
+                          width: 40,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              'lib/assets/pngegg.png',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Text(
-                      'Burger',
-                      style: TextStyle(
-                          color: cblack,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
+                      Text(
+                        'Burger',
+                        style: TextStyle(
+                            color: cblack,
+                            fontSize: 17,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

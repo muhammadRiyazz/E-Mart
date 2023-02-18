@@ -1,4 +1,5 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
+import 'package:emart/presendation/Screen%20profile%20&%20Settings/Screen_profile_settings.dart';
 import 'package:emart/presendation/screen%20order/screen_order.dart';
 import 'package:emart/presendation/screen_home/screen_home_.dart';
 import 'package:flutter/material.dart';
@@ -13,19 +14,19 @@ class Navigation extends StatelessWidget {
     ScreenHome(),
     ScreenCart(),
     ScreenOrders(),
-    ScreenHome(),
+    ScreenProfileSettings(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: cmainwhite,
+      //  backgroundColor: cmainwhite,
       bottomNavigationBar: Bottumnavigation(),
       body: SafeArea(
         child: ValueListenableBuilder(
           valueListenable: IndexValueNotifier,
           builder: (context, int index, child) {
             return Scaffold(
-              backgroundColor: cmainwhite,
+              // backgroundColor: cmainwhite,
               body: pages[index],
             );
           },
@@ -71,7 +72,7 @@ class Bottumnavigation extends StatelessWidget {
                   icon: const Icon(Icons.shopping_cart_rounded),
                 ),
                 CustomNavigationBarItem(
-                  icon: const Icon(Icons.account_circle),
+                  icon: const Icon(Icons.person),
                 ),
               ]),
         );

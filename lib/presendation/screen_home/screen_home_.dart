@@ -6,7 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
+import '../Screen offers/Screen_offers.dart';
 
 class ScreenHome extends StatelessWidget {
   const ScreenHome({super.key});
@@ -42,11 +43,20 @@ class ScreenHome extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 192, 140, 101),
-                borderRadius: BorderRadius.circular(10)),
-            height: 140,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ScreenOffers();
+                },
+              ));
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 192, 140, 101),
+                  borderRadius: BorderRadius.circular(10)),
+              height: 140,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),

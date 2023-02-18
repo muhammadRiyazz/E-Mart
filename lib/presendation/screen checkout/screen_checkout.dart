@@ -17,7 +17,7 @@ class ScreenCheckout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: cmainwhite,
+      //  backgroundColor: cmainwhite,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
