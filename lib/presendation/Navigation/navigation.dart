@@ -1,4 +1,5 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
+import 'package:emart/presendation/screen%20order/screen_order.dart';
 import 'package:emart/presendation/screen_home/screen_home_.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class Navigation extends StatelessWidget {
   final List<Widget> pages = [
     ScreenHome(),
     ScreenCart(),
-    ScreenHome(),
+    ScreenOrders(),
     ScreenHome(),
   ];
   @override
@@ -64,13 +65,13 @@ class Bottumnavigation extends StatelessWidget {
                   icon: const Icon(Icons.home),
                 ),
                 CustomNavigationBarItem(
-                  icon: const Icon(Icons.menu_book_rounded),
+                  icon: const Icon(Icons.shopping_bag_rounded),
+                ),
+                CustomNavigationBarItem(
+                  icon: const Icon(Icons.shopping_cart_rounded),
                 ),
                 CustomNavigationBarItem(
                   icon: const Icon(Icons.account_circle),
-                ),
-                CustomNavigationBarItem(
-                  icon: const Icon(Icons.home),
                 ),
               ]),
         );

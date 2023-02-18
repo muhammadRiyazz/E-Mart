@@ -43,7 +43,7 @@ class OrderList extends StatelessWidget {
                     ),
                     Text(
                       'Burger',
-                      style: TextStyle(fontSize: 16, color: Colors.grey),
+                      style: TextStyle(fontSize: 16, color: cgrey),
                     ),
                     Spacer(),
                     Row(

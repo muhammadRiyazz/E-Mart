@@ -4,6 +4,8 @@ import 'package:emart/core/constands/colors.dart';
 import 'package:emart/presendation/screen%20checkout/widgets/Shipping_type.dart';
 import 'package:emart/presendation/screen%20checkout/widgets/Location_part.dart';
 import 'package:emart/presendation/screen%20checkout/widgets/order_list.dart';
+import 'package:emart/presendation/screen%20checkout/widgets/price_part.dart';
+import 'package:emart/presendation/widgets/screen_title_part.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -15,43 +17,19 @@ class ScreenCheckout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: cmainwhite,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 17),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          // color: cmain,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        height: 35,
-                        width: 35,
-                        child: const Icon(
-                          Icons.arrow_back_ios_new_sharp,
-                          color: cblack,
-                          size: 18,
-                        ),
-                      ),
-                    ),
-                    const Text(
-                      '  Checkout',
-                      style:
-                          TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
+              Titlepart(
+                  ontap: () {
+                    Navigator.pop(context);
+                  },
+                  title: ' Checkout'),
+              const Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
                 child: Text(
                   ' Shipping Address',
@@ -59,11 +37,11 @@ class ScreenCheckout extends StatelessWidget {
                 ),
               ),
               const CheckoutLocaton(),
-              Divider(
+              const Divider(
                 thickness: 1.2,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 7),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 7),
                 child: Text(
                   ' Order List',
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
@@ -83,6 +61,7 @@ class ScreenCheckout extends StatelessWidget {
                 ),
               ),
               ShippingType(),
+              PricePart(),
               Padding(
                 padding: const EdgeInsets.all(14.0),
                 child: Container(
@@ -97,7 +76,7 @@ class ScreenCheckout extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Conform To Payment',
+                        'Continue to payment',
                         style: TextStyle(
                             color: cwhite,
                             fontSize: 16,
@@ -115,12 +94,6 @@ class ScreenCheckout extends StatelessWidget {
                   )),
                 ),
               ),
-              Container(
-                height: 250,
-                decoration: BoxDecoration(
-                    color: cmain, borderRadius: BorderRadius.circular(15)),
-                width: double.infinity,
-              )
             ],
           ),
         ),
