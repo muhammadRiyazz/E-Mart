@@ -3,29 +3,29 @@ import 'package:emart/presendation/screen_home/screen_home_.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constands/colors.dart';
+import '../screen cart/screen_cart.dart';
 
 class Navigation extends StatelessWidget {
   Navigation({super.key});
   // final PageController pageController = PageController();
   final List<Widget> pages = [
     ScreenHome(),
-    ScreenHome(),
+    ScreenCart(),
     ScreenHome(),
     ScreenHome(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: cwhite,
+      backgroundColor: cmainwhite,
       bottomNavigationBar: Bottumnavigation(),
       body: SafeArea(
         child: ValueListenableBuilder(
           valueListenable: IndexValueNotifier,
           builder: (context, int index, child) {
             return Scaffold(
-              body: Padding(
-                  child: pages[index],
-                  padding: EdgeInsets.only(top: 10, left: 10, right: 10)),
+              backgroundColor: cmainwhite,
+              body: pages[index],
             );
           },
         ),
@@ -47,7 +47,7 @@ class Bottumnavigation extends StatelessWidget {
       valueListenable: IndexValueNotifier,
       builder: (context, newindex, child) {
         return Padding(
-          padding: const EdgeInsets.all(6),
+          padding: const EdgeInsets.only(bottom: 6),
           child: CustomNavigationBar(
               currentIndex: newindex,
               onTap: (index) {

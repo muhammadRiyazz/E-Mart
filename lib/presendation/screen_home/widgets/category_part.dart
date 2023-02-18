@@ -10,13 +10,10 @@ class CategoryPart extends StatefulWidget {
   State<CategoryPart> createState() => _CategoryPartState();
 }
 
-int curredintex = 0;
-
 class _CategoryPartState extends State<CategoryPart> {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      physics: ScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       separatorBuilder: (context, index) {
         return const SizedBox(
           width: 8,
@@ -28,21 +25,14 @@ class _CategoryPartState extends State<CategoryPart> {
         return Column(
           children: [
             InkWell(
-              onTap: () {
-                setState(() {
-                  curredintex = index;
-                });
-              },
+              onTap: () {},
               child: Container(
                 padding: const EdgeInsets.symmetric(
                   vertical: 3,
                   horizontal: 18,
                 ),
                 decoration: BoxDecoration(
-                    color: index == curredintex
-                        ? Color.fromARGB(255, 221, 115, 115)
-                        : const Color.fromARGB(255, 247, 245, 245),
-                    borderRadius: BorderRadius.circular(10)),
+                    color: cwhite, borderRadius: BorderRadius.circular(10)),
                 child: Row(
                   children: [
                     Padding(
@@ -62,11 +52,9 @@ class _CategoryPartState extends State<CategoryPart> {
                     Text(
                       'Burger',
                       style: TextStyle(
-                          color: index == curredintex ? cwhite : cblack,
+                          color: cblack,
                           fontSize: 17,
-                          fontWeight: index == curredintex
-                              ? FontWeight.bold
-                              : FontWeight.w400),
+                          fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -76,8 +64,7 @@ class _CategoryPartState extends State<CategoryPart> {
               padding: const EdgeInsets.all(5.0),
               child: Container(
                 decoration: BoxDecoration(
-                    color: index == curredintex ? cmain : cmainwhite,
-                    borderRadius: BorderRadius.circular(5)),
+                    color: cmainwhite, borderRadius: BorderRadius.circular(5)),
                 height: 4,
                 width: 30,
               ),

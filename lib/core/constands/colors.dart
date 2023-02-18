@@ -4,4 +4,5 @@ const cblack = Colors.black;
 const cwhite = Colors.white;
 const cyellow = Colors.yellow;
 const cmain = Color.fromARGB(255, 221, 115, 115);
-const cmainwhite = Color.fromARGB(255, 239, 234, 234);
+const cmainwhite = Color.fromARGB(255, 246, 243, 243);
+const cdark = Color.fromARGB(255, 82, 81, 70);

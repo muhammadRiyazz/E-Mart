@@ -1,32 +1,37 @@
 import 'package:emart/core/constands/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../Screen product/Screen_product.dart';
-
-class ProductsGrid extends StatelessWidget {
-  const ProductsGrid({
+class SimilarProduct extends StatelessWidget {
+  const SimilarProduct({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.builder(
+    return Container(
+      height: 200,
+      child: ListView.separated(
+        separatorBuilder: (context, index) {
+          return SizedBox(
+            width: 5,
+          );
+        },
+        scrollDirection: Axis.horizontal,
         physics: ScrollPhysics(),
         itemCount: 6,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return ScreenProduct();
-                },
-              ));
+              // Navigator.push(context, MaterialPageRoute(
+              //   builder: (context) {
+              //     return ScreenProduct();
+              //   },
+              // ));
             },
             child: Container(
               padding: EdgeInsets.all(9),
               decoration: BoxDecoration(
-                  color: cwhite, borderRadius: BorderRadius.circular(10)),
+                  color: cmainwhite, borderRadius: BorderRadius.circular(10)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,15 +59,18 @@ class ProductsGrid extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Container(
-                        height: 45,
-                        width: 45,
-                        decoration: BoxDecoration(
-                            color: cmain,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Icon(
-                          Icons.add_shopping_cart_rounded,
-                          color: cwhite,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 9),
+                        child: Container(
+                          height: 45,
+                          width: 45,
+                          decoration: BoxDecoration(
+                              color: cmain,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Icon(
+                            Icons.add_shopping_cart_rounded,
+                            color: cwhite,
+                          ),
                         ),
                       )
                     ],
@@ -78,8 +86,6 @@ class ProductsGrid extends StatelessWidget {
             ),
           );
         },
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, crossAxisSpacing: 10.0, mainAxisSpacing: 10.0),
       ),
     );
   }
