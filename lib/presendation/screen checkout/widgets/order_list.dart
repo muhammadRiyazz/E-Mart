@@ -29,7 +29,7 @@ class OrderList extends StatelessWidget {
                     color: cmainwhite, borderRadius: BorderRadius.circular(20)),
                 padding: EdgeInsets.all(8),
                 child: Image.asset(
-                  'lib/assets/pngegg.png',
+                  'lib/assets/pizza 1.png',
                   fit: BoxFit.fill,
                 ),
               ),

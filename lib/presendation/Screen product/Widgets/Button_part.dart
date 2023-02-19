@@ -1,6 +1,8 @@
 import 'package:emart/core/constands/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../screen checkout/screen_checkout.dart';
+
 class ButtonPart extends StatelessWidget {
   const ButtonPart({
     super.key,
@@ -19,33 +21,42 @@ class ButtonPart extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
-            child: Container(
-              height: double.maxFinite,
-              width: .6 * msize.width,
-              decoration: BoxDecoration(
-                color: cblack,
-                // border: Border.all(color: cdark),
-                borderRadius: BorderRadius.circular(20),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ScreenCheckout();
+                  },
+                ));
+              },
+              child: Container(
+                height: double.maxFinite,
+                width: .6 * msize.width,
+                decoration: BoxDecoration(
+                  color: cblack,
+                  // border: Border.all(color: cdark),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'Buy Now',
+                        style: TextStyle(
+                            color: cwhite,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Icon(
+                        Icons.shopping_bag_outlined,
+                        color: cwhite,
+                        size: 27,
+                      )
+                    ]),
               ),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      'Buy Now',
-                      style: TextStyle(
-                          color: cwhite,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Icon(
-                      Icons.shopping_bag_outlined,
-                      color: cwhite,
-                      size: 27,
-                    )
-                  ]),
             ),
           ),
           const Spacer(),

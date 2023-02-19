@@ -37,7 +37,7 @@ class CompletedOrders extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20)),
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'lib/assets/pngegg.png',
+                          'lib/assets/Grilled-Food-PNG-Transparent-File.png',
                           fit: BoxFit.fill,
                         ),
                       ),

@@ -39,6 +39,9 @@ dependencies:
   custom_navigation_bar: ^0.8.2
   intl_phone_number_input: ^0.7.2
   simple_shadow: ^0.3.0
+  flutter_swiper_null_safety: ^1.0.2
+  quickalert: ^1.0.1
+
 
 
 

@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
+import '../../Screen Category Prodects/Screen_Category_products.dart';
+
 class CategoryPart extends StatefulWidget {
   const CategoryPart({super.key});
 
@@ -26,7 +28,13 @@ class _CategoryPartState extends State<CategoryPart> {
         return Column(
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ScreenCategoryProducts();
+                  },
+                ));
+              },
               child: SimpleShadow(
                 opacity: 0.2,
                 child: Container(

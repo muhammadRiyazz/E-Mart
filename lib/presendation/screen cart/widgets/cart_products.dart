@@ -1,4 +1,5 @@
 import 'package:emart/core/constands/colors.dart';
+import 'package:emart/presendation/screen%20cart/widgets/bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
@@ -18,7 +19,7 @@ class CartProduct extends StatelessWidget {
             height: 6,
           );
         },
-        itemCount: 10,
+        itemCount: 3,
         itemBuilder: (context, index) {
           return SimpleShadow(
             opacity: 0.05,
@@ -39,7 +40,7 @@ class CartProduct extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20)),
                       padding: EdgeInsets.all(8),
                       child: Image.asset(
-                        'lib/assets/pngegg.png',
+                        'lib/assets/pngfind.com-kfc-bucket-png-6463802.png',
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -51,24 +52,28 @@ class CartProduct extends StatelessWidget {
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text(
+                              children: [
+                                const Text(
                                   'Chese Burger',
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500),
                                 ),
-                                Icon(
-                                  Icons.delete_outline_rounded,
-                                  color: cdark,
-                                )
+                                IconButton(
+                                    onPressed: () {
+                                      cartbottomsheet(context);
+                                    },
+                                    icon: const Icon(
+                                      Icons.delete_outline_rounded,
+                                      color: cdark,
+                                    )),
                               ],
                             ),
                             Spacer(),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   '₹ 299',
                                   style: TextStyle(
                                       fontSize: 18,
@@ -77,7 +82,7 @@ class CartProduct extends StatelessWidget {
                                 SimpleShadow(
                                   opacity: 0.3,
                                   child: Container(
-                                    padding: EdgeInsets.all(6),
+                                    padding: const EdgeInsets.all(6),
                                     width: 140,
                                     height: 33,
                                     decoration: BoxDecoration(
@@ -104,7 +109,7 @@ class CartProduct extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ],

@@ -1,5 +1,6 @@
 import 'package:emart/core/constands/colors.dart';
 import 'package:emart/presendation/Screen%20edit%20profile/screen_edit_profile.dart';
+import 'package:emart/presendation/widgets/alert_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -101,7 +102,10 @@ class ScreenProfileSettings extends StatelessWidget {
               leading: Icon(Icons.privacy_tip_outlined),
             ),
             Spacer(),
-            const ListTile(
+            ListTile(
+              onTap: () {
+                alertbox(context);
+              },
               title: Text(
                 'Log Out',
                 style: TextStyle(color: Colors.red),
