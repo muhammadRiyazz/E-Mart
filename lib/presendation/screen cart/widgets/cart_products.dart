@@ -26,7 +26,7 @@ class CartProduct extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     color: cwhite, borderRadius: BorderRadius.circular(18)),
                 height: .15 * msize.height,
@@ -38,7 +38,7 @@ class CartProduct extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: cmainwhite,
                           borderRadius: BorderRadius.circular(20)),
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Image.asset(
                         'lib/assets/pngfind.com-kfc-bucket-png-6463802.png',
                         fit: BoxFit.fill,
@@ -69,7 +69,7 @@ class CartProduct extends StatelessWidget {
                                     )),
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [

@@ -1,4 +1,5 @@
 import 'package:emart/presendation/Navigation/navigation.dart';
+import 'package:emart/presendation/Screen%20Intro/screen_intro.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Navigation(),
+      home: ScreenIntro(),
     );
   }
 }
