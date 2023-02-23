@@ -17,7 +17,7 @@ class PageviewScnd extends StatelessWidget {
         Container(
           height: mysize.height * 0.5,
           //  color: mGrey,
-          child: Image.asset('lib/assets/Illustration 2.png'),
+          child: Image.asset('assets/Illustration 2.png'),
         ),
         // hsizedbox15,
         Padding(

@@ -17,7 +17,7 @@ class PageviewFirst extends StatelessWidget {
           height: mysize.height * 0.5,
           // color: mBlue,
           child: Image.asset(
-              'lib/assets/Food-Delivery-Scooter-PNG-Isolated-Photo.png'),
+              'assets/Food-Delivery-Scooter-PNG-Isolated-Photo.png'),
         ),
         //  hsizedbox15,
         const Padding(

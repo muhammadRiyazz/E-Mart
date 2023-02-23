@@ -1,8 +1,10 @@
 import 'package:emart/core/constands/colors.dart';
 import 'package:emart/presendation/Navigation/navigation.dart';
-import 'package:emart/presendation/Screen%20Intro/pages/page_first.dart';
-import 'package:emart/presendation/Screen%20Intro/pages/page_scnd.dart';
-import 'package:emart/presendation/Screen%20Intro/pages/page_thrd.dart';
+import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/pages/page_first.dart';
+import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/pages/page_scnd.dart';
+import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/pages/page_thrd.dart';
+import 'package:emart/presendation/user%20intro%20screens/screen%20into%20home/screen_intro_home.dart';
+import 'package:emart/presendation/user%20intro%20screens/screen%20login.dart/screen_login.dart';
 import 'package:flutter/material.dart';
 
 class ScreenIntro extends StatefulWidget {
@@ -67,7 +69,7 @@ class _ScreenIntroState extends State<ScreenIntro> {
                 (index) => buildDot(index),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             TextButton(
@@ -75,7 +77,7 @@ class _ScreenIntroState extends State<ScreenIntro> {
                   currentIndex == 2
                       ? Navigator.pushReplacement(context, MaterialPageRoute(
                           builder: (context) {
-                            return Navigation();
+                            return ScreenIntroHome();
                           },
                         ))
                       : setState(() {
@@ -102,7 +104,7 @@ class _ScreenIntroState extends State<ScreenIntro> {
                               style: TextStyle(color: cwhite),
                             )),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
           ],

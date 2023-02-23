@@ -15,7 +15,7 @@ class Pageviewlast extends StatelessWidget {
       children: [
         SizedBox(
           height: mysize.height * 0.5,
-          child: Image.asset('lib/assets/Illustartion.png'),
+          child: Image.asset('assets/Illustartion.png'),
         ),
         // hsizedbox15,
         Padding(
