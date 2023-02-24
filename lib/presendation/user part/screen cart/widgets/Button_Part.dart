@@ -1,5 +1,5 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/screen%20checkout/screen_checkout.dart';
+import 'package:emart/presendation/user%20part/screen%20checkout/screen_checkout.dart';
 import 'package:flutter/material.dart';
 
 class LastButtonPart extends StatelessWidget {

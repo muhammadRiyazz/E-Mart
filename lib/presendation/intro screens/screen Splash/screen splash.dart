@@ -1,5 +1,5 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/screen_intro.dart';
+import 'package:emart/presendation/intro%20screens/Screen%20Intro/screen_intro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

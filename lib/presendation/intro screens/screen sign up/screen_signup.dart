@@ -1,12 +1,12 @@
-import 'package:emart/presendation/user%20intro%20screens/screen%20login.dart/screen_login.dart';
-import 'package:emart/presendation/user%20intro%20screens/screen%20sign%20up/widgets/TextFieldSignUp.dart';
-import 'package:emart/presendation/user%20intro%20screens/widgets/account_box.dart';
+import 'package:emart/presendation/intro%20screens/screen%20login.dart/screen_login.dart';
+import 'package:emart/presendation/intro%20screens/screen%20sign%20up/widgets/TextFieldSignUp.dart';
+import 'package:emart/presendation/intro%20screens/widgets/account_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../../core/constands/colors.dart';
-import '../../Navigation/navigation.dart';
+import '../../user part/Navigation/navigation.dart';
 import '../widgets/Or_Divider.dart';
 
 class ScreenSignUp extends StatelessWidget {

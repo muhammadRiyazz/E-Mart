@@ -1,10 +1,10 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/Navigation/navigation.dart';
-import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/pages/page_first.dart';
-import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/pages/page_scnd.dart';
-import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/pages/page_thrd.dart';
-import 'package:emart/presendation/user%20intro%20screens/screen%20into%20home/screen_intro_home.dart';
-import 'package:emart/presendation/user%20intro%20screens/screen%20login.dart/screen_login.dart';
+import 'package:emart/presendation/user%20part/Navigation/navigation.dart';
+import 'package:emart/presendation/intro%20screens/Screen%20Intro/pages/page_first.dart';
+import 'package:emart/presendation/intro%20screens/Screen%20Intro/pages/page_scnd.dart';
+import 'package:emart/presendation/intro%20screens/Screen%20Intro/pages/page_thrd.dart';
+import 'package:emart/presendation/intro%20screens/screen%20into%20home/screen_intro_home.dart';
+import 'package:emart/presendation/intro%20screens/screen%20login.dart/screen_login.dart';
 import 'package:flutter/material.dart';
 
 class ScreenIntro extends StatefulWidget {

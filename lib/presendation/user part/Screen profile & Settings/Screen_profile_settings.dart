@@ -1,6 +1,6 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/Screen%20edit%20profile/screen_edit_profile.dart';
-import 'package:emart/presendation/widgets/alert_box.dart';
+import 'package:emart/presendation/user%20part/Screen%20edit%20profile/screen_edit_profile.dart';
+import 'package:emart/presendation/user%20part/widgets/alert_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

@@ -1,10 +1,10 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
-import 'package:emart/presendation/Screen%20profile%20&%20Settings/Screen_profile_settings.dart';
-import 'package:emart/presendation/screen%20order/screen_order.dart';
-import 'package:emart/presendation/screen_home/screen_home_.dart';
+import 'package:emart/presendation/user%20part/Screen%20profile%20&%20Settings/Screen_profile_settings.dart';
+import 'package:emart/presendation/user%20part/screen%20order/screen_order.dart';
+import 'package:emart/presendation/user%20part/screen_home/screen_home_.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/constands/colors.dart';
+import '../../../core/constands/colors.dart';
 import '../screen cart/screen_cart.dart';
 
 class Navigation extends StatelessWidget {

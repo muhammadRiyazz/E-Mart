@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-import '../../../core/constands/colors.dart';
+import '../../../../core/constands/colors.dart';
 
 cartbottomsheet(BuildContext context) {
   return showModalBottomSheet(

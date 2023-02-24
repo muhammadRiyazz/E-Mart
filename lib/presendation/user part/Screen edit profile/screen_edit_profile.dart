@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-import '../../core/constands/colors.dart';
+import '../../../core/constands/colors.dart';
 import '../widgets/screen_title_part.dart';
 
 class ScreenEditProfile extends StatefulWidget {
@@ -232,7 +232,7 @@ class EditTextFeilds extends StatelessWidget {
           SimpleShadow(
             opacity: 0.0,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: TextField(
                 decoration: InputDecoration(
                     prefixIcon: topicon,

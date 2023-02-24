@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-import '../../core/constands/colors.dart';
+import '../../../core/constands/colors.dart';
 
 class ScreenPayment extends StatefulWidget {
   ScreenPayment({super.key});

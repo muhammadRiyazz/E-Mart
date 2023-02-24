@@ -1,6 +1,6 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/Screen%20Category%20Prodects/Widgets/Products.dart';
-import 'package:emart/presendation/widgets/screen_title_part.dart';
+import 'package:emart/presendation/user%20part/Screen%20Category%20Prodects/Widgets/Products.dart';
+import 'package:emart/presendation/user%20part/widgets/screen_title_part.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

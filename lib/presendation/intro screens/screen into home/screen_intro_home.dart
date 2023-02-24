@@ -1,7 +1,7 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/user%20intro%20screens/screen%20into%20home/widget/accounts_box.dart';
-import 'package:emart/presendation/user%20intro%20screens/screen%20login.dart/screen_login.dart';
-import 'package:emart/presendation/user%20intro%20screens/widgets/Or_Divider.dart';
+import 'package:emart/presendation/intro%20screens/screen%20into%20home/widget/accounts_box.dart';
+import 'package:emart/presendation/intro%20screens/screen%20login.dart/screen_login.dart';
+import 'package:emart/presendation/intro%20screens/widgets/Or_Divider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

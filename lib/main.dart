@@ -1,8 +1,8 @@
-import 'package:emart/presendation/Navigation/navigation.dart';
-import 'package:emart/presendation/user%20intro%20screens/Screen%20Intro/screen_intro.dart';
+import 'package:emart/presendation/user%20part/Navigation/navigation.dart';
+import 'package:emart/presendation/intro%20screens/Screen%20Intro/screen_intro.dart';
 import 'package:flutter/material.dart';
 
-import 'presendation/user intro screens/screen Splash/screen splash.dart';
+import 'presendation/intro screens/screen Splash/screen splash.dart';
 
 void main() {
   runApp(const MyApp());

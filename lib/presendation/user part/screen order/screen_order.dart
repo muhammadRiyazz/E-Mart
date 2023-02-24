@@ -1,6 +1,6 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/screen%20order/widgets/active_order_view.dart';
-import 'package:emart/presendation/screen%20order/widgets/completed_order_view.dart';
+import 'package:emart/presendation/user%20part/screen%20order/widgets/active_order_view.dart';
+import 'package:emart/presendation/user%20part/screen%20order/widgets/completed_order_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';

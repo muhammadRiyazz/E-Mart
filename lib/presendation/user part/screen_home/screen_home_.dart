@@ -1,7 +1,7 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/screen_home/widgets/category_part.dart';
-import 'package:emart/presendation/screen_home/widgets/products_grid.dart';
-import 'package:emart/presendation/screen_home/widgets/title_part.dart';
+import 'package:emart/presendation/user%20part/screen_home/widgets/category_part.dart';
+import 'package:emart/presendation/user%20part/screen_home/widgets/products_grid.dart';
+import 'package:emart/presendation/user%20part/screen_home/widgets/title_part.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
