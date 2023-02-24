@@ -216,19 +216,6 @@ class EditTextFeilds extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          // Row(
-          //   children: [
-          //     topicon,
-          //     Text(
-          //       toptitle,
-          //       style: const TextStyle(
-          //         fontWeight: FontWeight.w500,
-          //         fontSize: 15,
-          //         color: cgrey,
-          //       ),
-          //     ),
-          //   ],
-          // ),
           SimpleShadow(
             opacity: 0.0,
             child: Padding(
@@ -239,7 +226,7 @@ class EditTextFeilds extends StatelessWidget {
                     hintText: toptitle,
                     filled: true,
                     fillColor: cmainwhite,
-                    contentPadding: EdgeInsets.all(10)),
+                    contentPadding: const EdgeInsets.all(10)),
               ),
             ),
           ),

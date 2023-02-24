@@ -1,3 +1,4 @@
+import 'package:emart/presendation/admin%20part/navigation/navigation.dart';
 import 'package:emart/presendation/user%20part/Navigation/navigation.dart';
 import 'package:emart/presendation/intro%20screens/Screen%20Intro/screen_intro.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const ScreenSplash(),
+      home: NavigationAdmin(),
     );
   }
 }
