@@ -34,7 +34,7 @@ class ScreenProduct extends StatelessWidget {
                       width: double.infinity,
                       height: 0.33 * msize.height,
                       child: Image.asset(
-                        'lib/assets/pngegg.png',
+                        'assets/pngegg.png',
                         fit: BoxFit.fill,
                       ),
                     ),

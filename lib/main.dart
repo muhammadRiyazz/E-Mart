@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
                 style: BorderStyle.solid,
-                width: 1,
+                width: 0,
                 color: Color.fromARGB(255, 251, 248, 248)),
           ),
           focusedBorder: OutlineInputBorder(

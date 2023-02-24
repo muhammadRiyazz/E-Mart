@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../../core/constands/colors.dart';
+import '../../Navigation/navigation.dart';
 import '../widgets/Or_Divider.dart';
 
 class ScreenSignUp extends StatelessWidget {
@@ -68,11 +69,11 @@ class ScreenSignUp extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        // Navigator.pushReplacement(context, MaterialPageRoute(
-                        //   builder: (context) {
-                        //     return Navigation();
-                        //   },
-                        // ));
+                        Navigator.pushReplacement(context, MaterialPageRoute(
+                          builder: (context) {
+                            return Navigation();
+                          },
+                        ));
                       },
                       child: Container(
                           decoration: const BoxDecoration(
@@ -83,7 +84,7 @@ class ScreenSignUp extends StatelessWidget {
                           height: 50,
                           child: const Center(
                               child: Text(
-                            'Login',
+                            'Sign up',
                             style: TextStyle(color: cwhite),
                           ))),
                     ),

@@ -51,15 +51,26 @@ class _ScreenEditProfileState extends State<ScreenEditProfile> {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Titlepart(
-                title: ' Edit Profile',
-                ontap: () {
-                  Navigator.pop(context);
-                },
+              ListTile(
+                contentPadding: EdgeInsets.all(5),
+                title: Text(
+                  'Edit Profile',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                //  trailing: Icon(Icons.search),
+                leading: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Icon(
+                      Icons.arrow_back,
+                      // size: 22,
+                      color: cblack,
+                    )),
               ),
               Center(
                   child: SimpleShadow(
@@ -82,7 +93,7 @@ class _ScreenEditProfileState extends State<ScreenEditProfile> {
                           color: cwhite,
                           borderRadius: BorderRadius.circular(20)),
                       child: Image.asset(
-                        'lib/assets/profile-icon-png-899 (1).png',
+                        'assets/profile-icon-png-899 (1).png',
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -202,28 +213,33 @@ class EditTextFeilds extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          Row(
-            children: [
-              topicon,
-              Text(
-                toptitle,
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15,
-                  color: cgrey,
-                ),
-              ),
-            ],
-          ),
+          // Row(
+          //   children: [
+          //     topicon,
+          //     Text(
+          //       toptitle,
+          //       style: const TextStyle(
+          //         fontWeight: FontWeight.w500,
+          //         fontSize: 15,
+          //         color: cgrey,
+          //       ),
+          //     ),
+          //   ],
+          // ),
           SimpleShadow(
-            opacity: 0.1,
-            child: const Padding(
+            opacity: 0.0,
+            child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: TextField(
-                decoration: InputDecoration(contentPadding: EdgeInsets.zero),
+                decoration: InputDecoration(
+                    prefixIcon: topicon,
+                    hintText: toptitle,
+                    filled: true,
+                    fillColor: cmainwhite,
+                    contentPadding: EdgeInsets.all(10)),
               ),
             ),
           ),

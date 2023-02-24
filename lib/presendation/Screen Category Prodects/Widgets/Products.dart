@@ -46,7 +46,7 @@ class CategoryProductsGrid extends StatelessWidget {
                               //   color: ,
                               borderRadius: BorderRadius.circular(10)),
                           child: Image.asset(
-                            'lib/assets/pngegg.png',
+                            'assets/pngegg.png',
                             fit: BoxFit.fill,
                           ),
                         ),

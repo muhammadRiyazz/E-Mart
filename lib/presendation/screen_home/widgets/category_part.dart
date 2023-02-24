@@ -54,7 +54,7 @@ class _CategoryPartState extends State<CategoryPart> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
-                              'lib/assets/pngegg.png',
+                              'assets/pngegg.png',
                               fit: BoxFit.fill,
                             ),
                           ),

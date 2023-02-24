@@ -20,20 +20,10 @@ class ScreenCart extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   ' My Cart',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: TextField(
-                      decoration: InputDecoration(
-                          prefixIcon: const Icon(Icons.search_rounded),
-                          contentPadding: EdgeInsets.zero,
-                          hintText: 'Search Products',
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15)))),
                 ),
                 CartProduct(),
               ],

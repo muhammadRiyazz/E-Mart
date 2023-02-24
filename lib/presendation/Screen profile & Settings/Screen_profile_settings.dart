@@ -35,7 +35,7 @@ class ScreenProfileSettings extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: cwhite, borderRadius: BorderRadius.circular(20)),
                 child: Image.asset(
-                  'lib/assets/profile-icon-png-899 (1).png',
+                  'assets/profile-icon-png-899 (1).png',
                   fit: BoxFit.fill,
                 ),
               ),

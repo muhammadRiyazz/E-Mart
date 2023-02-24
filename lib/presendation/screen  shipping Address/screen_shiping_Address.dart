@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class ChooseShipping extends StatefulWidget {
-  ChooseShipping({super.key});
+class ChooseShippingAddress extends StatefulWidget {
+  ChooseShippingAddress({super.key});
 
   @override
-  State<ChooseShipping> createState() => _ChooseShippingState();
+  State<ChooseShippingAddress> createState() => ChooseShippingAddressState();
 }
 
-class _ChooseShippingState extends State<ChooseShipping> {
+class ChooseShippingAddressState extends State<ChooseShippingAddress> {
   String? shipping;
 
   @override
@@ -31,17 +31,13 @@ class _ChooseShippingState extends State<ChooseShipping> {
                   ontap: () {
                     Navigator.pop(context);
                   },
-                  title: ' Choose Shipping'),
+                  title: ' Choose Shipping Address'),
             ),
             RadioTile(
                 shipping: shipping,
                 title: 'Economy',
                 price: 20,
                 subtitile: 'Estimated Arrival Dec 20',
-                icon: Icon(
-                  Icons.directions_walk_sharp,
-                  color: cblack,
-                ),
                 value: 'Economy',
                 ontap: (value) {
                   setState(() {
@@ -53,10 +49,6 @@ class _ChooseShippingState extends State<ChooseShipping> {
                 title: 'Regular',
                 price: 30,
                 subtitile: 'Estimated Arrival Dec 18',
-                icon: Icon(
-                  Icons.directions_bike_rounded,
-                  color: cblack,
-                ),
                 value: 'Regular',
                 ontap: (value) {
                   setState(() {
@@ -68,10 +60,6 @@ class _ChooseShippingState extends State<ChooseShipping> {
                 title: 'Cargo',
                 price: 40,
                 subtitile: 'Estimated Arrival Dec 15',
-                icon: Icon(
-                  Icons.local_shipping_outlined,
-                  color: cblack,
-                ),
                 value: 'Cargo',
                 ontap: (value) {
                   setState(() {
@@ -83,10 +71,6 @@ class _ChooseShippingState extends State<ChooseShipping> {
                 title: 'Express',
                 price: 50,
                 subtitile: 'Estimated Arrival Tomorrow',
-                icon: Icon(
-                  Icons.flight_land_outlined,
-                  color: cblack,
-                ),
                 value: 'Express',
                 ontap: (value) {
                   setState(() {
@@ -131,7 +115,7 @@ class RadioTile extends StatelessWidget {
       required this.shipping,
       required this.ontap,
       required this.value,
-      required this.icon,
+      //  required this.icon,
       required this.price,
       required this.subtitile,
       required this.title});
@@ -142,7 +126,7 @@ class RadioTile extends StatelessWidget {
   final int price;
   final String title;
   final String subtitile;
-  final Widget icon;
+  //final Widget icon;
 
   @override
   Widget build(BuildContext context) {
@@ -157,10 +141,12 @@ class RadioTile extends StatelessWidget {
             width: 80,
             child: Row(
               children: [
-                Text(
-                  '₹ $price',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                ),
+                InkWell(
+                    onTap: () {},
+                    child: Icon(
+                      Icons.edit,
+                      color: cblack,
+                    )),
                 Radio(
                     fillColor:
                         MaterialStateColor.resolveWith((states) => cblack),
@@ -175,7 +161,12 @@ class RadioTile extends StatelessWidget {
             title,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          leading: CircleAvatar(backgroundColor: cmainwhite, child: icon),
+          leading: CircleAvatar(
+              backgroundColor: cmainwhite,
+              child: Icon(
+                Icons.location_pin,
+                color: cblack,
+              )),
         ),
       ),
     );

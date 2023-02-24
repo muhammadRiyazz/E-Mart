@@ -72,7 +72,7 @@ class CartRemoveProduct extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20)),
                       padding: EdgeInsets.all(8),
                       child: Image.asset(
-                        'lib/assets/pngfind.com-kfc-bucket-png-6463802.png',
+                        'assets/pngfind.com-kfc-bucket-png-6463802.png',
                         fit: BoxFit.fill,
                       ),
                     ),

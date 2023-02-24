@@ -2,6 +2,8 @@ import 'package:emart/core/constands/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
+import '../../screen  shipping Address/screen_shiping_Address.dart';
+
 class CheckoutLocaton extends StatelessWidget {
   const CheckoutLocaton({
     super.key,
@@ -16,14 +18,21 @@ class CheckoutLocaton extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               color: cwhite, borderRadius: BorderRadius.circular(15)),
-          child: const ListTile(
+          child: ListTile(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ChooseShippingAddress();
+                },
+              ));
+            },
             contentPadding: EdgeInsets.zero,
             trailing: Padding(
               padding: EdgeInsets.all(8.0),
               child: Icon(
-                Icons.edit,
+                Icons.navigate_next_outlined,
                 color: cblack,
-                size: 34,
+                size: 30,
               ),
             ),
             title: Text(

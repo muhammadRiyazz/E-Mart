@@ -37,7 +37,7 @@ class ActiveOrders extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20)),
                         padding: EdgeInsets.all(8),
                         child: Image.asset(
-                          'lib/assets/chicken 1.png',
+                          'assets/chicken 1.png',
                           fit: BoxFit.fill,
                         ),
                       ),

@@ -12,8 +12,8 @@ class ScreenOffers extends StatelessWidget {
   ScreenOffers({super.key});
   final List<String> imgs = [
     // 'lib/assets/pngfind.com-kfc-chicken-bucket-png-3290413.png',
-    'lib/assets/pngfind.com-kfc-bucket-png-6463802.png',
-    'lib/assets/chicken 1.png'
+    'assets/pngfind.com-kfc-bucket-png-6463802.png',
+    'assets/chicken 1.png'
   ];
 
   @override

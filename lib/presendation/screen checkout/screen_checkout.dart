@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/screen%20checkout/widgets/Shipping_type.dart';
+import 'package:emart/presendation/screen%20Payment/Screen_Payment.dart';
 import 'package:emart/presendation/screen%20checkout/widgets/Location_part.dart';
 import 'package:emart/presendation/screen%20checkout/widgets/order_list.dart';
 import 'package:emart/presendation/screen%20checkout/widgets/price_part.dart';
@@ -20,15 +20,27 @@ class ScreenCheckout extends StatelessWidget {
       //  backgroundColor: cmainwhite,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: ListView(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Titlepart(
-                  ontap: () {
-                    Navigator.pop(context);
-                  },
-                  title: ' Checkout'),
+              ListTile(
+                contentPadding: EdgeInsets.all(5),
+                title: Text(
+                  'Checkout',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                //  trailing: Icon(Icons.search),
+                leading: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Icon(
+                      Icons.arrow_back,
+                      // size: 22,
+                      color: cblack,
+                    )),
+              ),
               const Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
                 child: Text(
@@ -53,45 +65,46 @@ class ScreenCheckout extends StatelessWidget {
               Divider(
                 thickness: 1.2,
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15, bottom: 5),
-                child: Text(
-                  ' Choose Shipping ',
-                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
-                ),
-              ),
-              ShippingType(),
               PricePart(),
               Padding(
                 padding: const EdgeInsets.all(14.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(115),
-                    color: cblack,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ScreenPayment();
+                      },
+                    ));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(115),
+                      color: cblack,
+                    ),
+                    height: 50,
+                    width: double.infinity,
+                    child: Center(
+                        child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Continue to payment',
+                          style: TextStyle(
+                              color: cwhite,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          width: 7,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: cwhite,
+                          size: 20,
+                        )
+                      ],
+                    )),
                   ),
-                  height: 50,
-                  width: double.infinity,
-                  child: Center(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Continue to payment',
-                        style: TextStyle(
-                            color: cwhite,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        width: 7,
-                      ),
-                      Icon(
-                        Icons.arrow_forward,
-                        color: cwhite,
-                        size: 20,
-                      )
-                    ],
-                  )),
                 ),
               ),
             ],

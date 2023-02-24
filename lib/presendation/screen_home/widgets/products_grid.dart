@@ -75,7 +75,7 @@ class ProductsGrid extends StatelessWidget {
                       ),
                       Expanded(
                         child: Image.asset(
-                          'lib/assets/pngegg.png',
+                          'assets/pngegg.png',
                           fit: BoxFit.fill,
                         ),
                       ),

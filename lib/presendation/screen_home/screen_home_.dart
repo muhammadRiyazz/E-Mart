@@ -27,6 +27,8 @@ class ScreenHome extends StatelessWidget {
                 Expanded(
                   child: TextField(
                       decoration: InputDecoration(
+                          filled: true,
+                          fillColor: cmainwhite,
                           prefixIcon: const Icon(Icons.search_rounded),
                           contentPadding: EdgeInsets.zero,
                           hintText: 'Search Products',
