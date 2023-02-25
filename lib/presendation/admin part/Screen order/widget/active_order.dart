@@ -5,10 +5,10 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-import '../../active order details/active_order_detail.dart';
+import '../../Order tab views/active_order_detail.dart';
 
-class ActiveOrdersAdmin extends StatelessWidget {
-  const ActiveOrdersAdmin({super.key});
+class CompletedOrdersadmin extends StatelessWidget {
+  const CompletedOrdersadmin({super.key});
 
   @override
   Widget build(BuildContext context) {

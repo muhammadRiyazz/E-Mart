@@ -1,11 +1,12 @@
 import 'package:emart/core/constands/colors.dart';
+import 'package:emart/presendation/admin%20part/Order%20tab%20views/widgets/some_other_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-class ActiveOrderDetails extends StatelessWidget {
-  const ActiveOrderDetails({super.key});
+class NonActiveOrderDetails extends StatelessWidget {
+  const NonActiveOrderDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class ActiveOrderDetails extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
-              contentPadding: EdgeInsets.all(5),
+              contentPadding: const EdgeInsets.all(5),
               title: const Text(
                 'Order Details',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
@@ -37,6 +38,7 @@ class ActiveOrderDetails extends StatelessWidget {
             SimpleShadow(
               opacity: 0.2,
               child: Container(
+                width: double.infinity,
                 decoration: BoxDecoration(
                     color: cwhite, borderRadius: BorderRadius.circular(10)),
                 child: Padding(
@@ -64,13 +66,13 @@ class ActiveOrderDetails extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   'bucket Chicken',
                                   style: TextStyle(
                                       fontSize: 19,
                                       fontWeight: FontWeight.w500),
                                 ),
-                                Text(
+                                const Text(
                                   'Chicken',
                                   style: TextStyle(fontSize: 17, color: cgrey),
                                 ),
@@ -81,8 +83,8 @@ class ActiveOrderDetails extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         color: cmainwhite,
                                         borderRadius: BorderRadius.circular(5)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(8.0),
                                       child: Text(
                                         'qty -3',
                                         style: TextStyle(
@@ -140,8 +142,9 @@ class ActiveOrderDetails extends StatelessWidget {
                       ),
                       const DividarDetails(),
                       const Prices(label: 'Amount', price: '₹ 399'),
-                      const Prices(label: 'Discount', price: '₹ 99'),
+                      const Prices(label: 'Delivery Charge', price: '₹ 50'),
                       const Prices(label: 'Gst', price: '₹ 10'),
+                      const Prices(label: 'Discount', price: '₹ 99'),
                       const DividarDetails(),
                       const Prices(label: 'Total', price: '₹ 300'),
                       const DividarDetails(),
@@ -156,73 +159,6 @@ class ActiveOrderDetails extends StatelessWidget {
           ],
         ),
       )),
-    );
-  }
-}
-
-class DetailsText extends StatelessWidget {
-  const DetailsText({
-    super.key,
-    required this.label,
-  });
-  final String label;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 5),
-      child: Text(
-        label,
-        style: TextStyle(fontSize: 17, color: cgrey),
-      ),
-    );
-  }
-}
-
-class DividarDetails extends StatelessWidget {
-  const DividarDetails({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 7),
-      child: Divider(
-        thickness: 1.3,
-      ),
-    );
-  }
-}
-
-class Prices extends StatelessWidget {
-  const Prices({
-    super.key,
-    required this.label,
-    required this.price,
-  });
-  final String label;
-  final String price;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 6),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: TextStyle(color: cgrey, fontSize: 17),
-          ),
-          Text(
-            price,
-            style: const TextStyle(
-              color: cblack,
-              fontSize: 18,
-            ),
-          )
-        ],
-      ),
     );
   }
 }

@@ -1,15 +1,13 @@
 import 'package:emart/core/constands/colors.dart';
-import 'package:emart/presendation/admin%20part/Order%20tab%20views/active_order_detail.dart';
+import 'package:emart/presendation/admin%20part/Order%20tab%20views/Non_Active_Order_Details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-import '../../Order tab views/completed_order.details.dart';
-
-class ActiveOrdersAdmin extends StatelessWidget {
-  const ActiveOrdersAdmin({super.key});
+class NonActive extends StatelessWidget {
+  const NonActive({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class ActiveOrdersAdmin extends StatelessWidget {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
-                      return ActiveOrderDetails();
+                      return NonActiveOrderDetails();
                     },
                   ));
                 },
@@ -78,7 +76,7 @@ class ActiveOrdersAdmin extends StatelessWidget {
                                         BorderRadius.all(Radius.circular(5))),
                                 padding: EdgeInsets.all(7),
                                 child: const Text(
-                                  'Active',
+                                  'Not Accepted',
                                   style: TextStyle(fontSize: 14, color: cgrey),
                                 ),
                               ),

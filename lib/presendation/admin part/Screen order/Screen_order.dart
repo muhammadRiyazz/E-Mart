@@ -1,3 +1,4 @@
+import 'package:emart/presendation/admin%20part/Screen%20order/widget/Non_active.dart';
 import 'package:emart/presendation/admin%20part/Screen%20order/widget/active_order.dart';
 import 'package:emart/presendation/admin%20part/Screen%20order/widget/complt_order.dart';
 import 'package:flutter/material.dart';
@@ -9,15 +10,16 @@ import '../../../core/constands/colors.dart';
 class ScreenOrder extends StatelessWidget {
   ScreenOrder({super.key});
   final List<Widget> ordertabs = [
-    const Center(child: Text('Active order')),
-    const Center(child: Text('Completed order')),
+    const Center(child: Text('Non Active')),
+    const Center(child: Text('Active')),
+    const Center(child: Text('Completed')),
   ];
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Column(
           children: [
             TabBar(
@@ -34,8 +36,11 @@ class ScreenOrder extends StatelessWidget {
             const Expanded(
                 child: Padding(
               padding: EdgeInsets.only(top: 15),
-              child: TabBarView(
-                  children: [ActiveOrdersAdmin(), CompletedOrdersadmin()]),
+              child: TabBarView(children: [
+                NonActive(),
+                ActiveOrdersAdmin(),
+                CompletedOrdersadmin(),
+              ]),
             )),
           ],
         ),

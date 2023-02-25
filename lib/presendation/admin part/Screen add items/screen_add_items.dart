@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
 import '../../../core/constands/colors.dart';
+import 'Widget/Image_part.dart';
+import 'Widget/TextFields.dart';
 
 class ScreenAddItems extends StatelessWidget {
   ScreenAddItems({super.key});
@@ -22,7 +24,7 @@ class ScreenAddItems extends StatelessWidget {
           children: [
             ListTile(
               contentPadding: EdgeInsets.all(5),
-              title: Text(
+              title: const Text(
                 'Add Item',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
@@ -37,47 +39,7 @@ class ScreenAddItems extends StatelessWidget {
                     color: cblack,
                   )),
             ),
-            Center(
-                child: SimpleShadow(
-              opacity: 0.3,
-              child: Stack(children: [
-                const SizedBox(
-                  //color: cmain,
-                  height: 130,
-                  width: 130,
-                ),
-                Positioned(
-                  bottom: 10,
-                  top: 10,
-                  left: 10,
-                  right: 10,
-                  child: Container(
-                    // height: 110,
-                    // width: 110,
-                    decoration: BoxDecoration(
-                        color: cwhite, borderRadius: BorderRadius.circular(20)),
-                    // child: Image.asset(
-                    //   'assets/profile-icon-png-899 (1).png',
-                    //   fit: BoxFit.fill,
-                    // ),
-                  ),
-                ),
-                Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: cgrey,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.add,
-                            color: cwhite,
-                          ),
-                        )))
-              ]),
-            )),
+            ProductPhotoPart(),
             ItemTextField(controller: itemnamecontroller, title: 'Item Name'),
             ItemTextField(
                 controller: categorynamecontroller, title: 'Category Name'),
@@ -118,27 +80,6 @@ class ScreenAddItems extends StatelessWidget {
           ],
         ),
       )),
-    );
-  }
-}
-
-class ItemTextField extends StatelessWidget {
-  const ItemTextField(
-      {super.key, required this.controller, required this.title});
-  final TextEditingController controller;
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          hintText: title,
-          filled: true,
-          fillColor: cmainwhite,
-        ),
-      ),
     );
   }
 }

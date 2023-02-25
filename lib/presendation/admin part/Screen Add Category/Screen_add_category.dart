@@ -78,7 +78,7 @@ class ScreenCategory extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: SimpleShadow(
                 opacity: 0.0,
-                child: TextField(
+                child: const TextField(
                   decoration: InputDecoration(
                     hintText: 'Category Name',
                     filled: true,
@@ -87,7 +87,7 @@ class ScreenCategory extends StatelessWidget {
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: InkWell(
