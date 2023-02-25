@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../AD_Screen_home.dart/admin_home_screen.dart';
+import '../Screen Carriers/screen_carriers.dart';
 import '../Screen order/Screen_order.dart';
 
 ValueNotifier<int> indexValueNotifier = ValueNotifier(0);
@@ -16,7 +17,7 @@ class NavigationAdmin extends StatelessWidget {
   final page = [
     AdScreenHome(),
     ScreenOrder(),
-    AdScreenHome(),
+    ScreenCarriers(),
     AdScreenHome(),
   ];
 

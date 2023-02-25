@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
 import '../../Order tab views/active_order_detail.dart';
+import '../../Order tab views/completed_order.details.dart';
 
 class CompletedOrdersadmin extends StatelessWidget {
   const CompletedOrdersadmin({super.key});
@@ -27,7 +28,7 @@ class CompletedOrdersadmin extends StatelessWidget {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
-                      return ActiveOrderDetails();
+                      return CompletedeOrderDetails();
                     },
                   ));
                 },
