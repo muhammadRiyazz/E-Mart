@@ -1,14 +1,15 @@
-import 'package:emart/presendation/admin%20part/Screen%20Carriers/widgets/Carrier_request.dart';
 import 'package:emart/presendation/admin%20part/Screen%20Carriers/widgets/carriers.dart';
+import 'package:emart/presendation/admin%20part/Screen%20Hotels/widgets/all_hotels.dart';
+import 'package:emart/presendation/admin%20part/Screen%20Hotels/widgets/hotel_request.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../../core/constands/colors.dart';
 
-class ScreenCarriers extends StatelessWidget {
-  ScreenCarriers({super.key});
-  final List<Widget> _tabs = [Text('Requests'), Text('Carriers')];
+class ScreenHotels extends StatelessWidget {
+  ScreenHotels({super.key});
+  final List<Widget> _tabs = [Text('Requests'), Text('Hotels')];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,7 +32,7 @@ class ScreenCarriers extends StatelessWidget {
             const Expanded(
                 child: Padding(
               padding: EdgeInsets.only(top: 15),
-              child: TabBarView(children: [CarriersRequests(), Carriers()]),
+              child: TabBarView(children: [HotelRequests(), AllHotels()]),
             )),
           ],
         ),

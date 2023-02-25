@@ -5,9 +5,10 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
 import '../../Screen Carrier Details/Screen_Carrier_Details.dart';
+import '../../Screen Hotel Details/screen_hotel_hetails.dart';
 
-class Carriers extends StatelessWidget {
-  const Carriers({super.key});
+class HotelRequests extends StatelessWidget {
+  const HotelRequests({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,25 +26,33 @@ class Carriers extends StatelessWidget {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
-                      return CarrierDetails();
+                      return HotelDetails();
                     },
                   ));
                 },
-
+                trailing: TextButton(
+                    onPressed: () {},
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: cmain,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Accept',
+                            style: TextStyle(color: cwhite),
+                          ),
+                        ))),
                 //  contentPadding: EdgeInsets.zero,
                 leading: Container(
-                  decoration: BoxDecoration(
-                      color: cmainwhite,
-                      borderRadius: BorderRadius.circular(10)),
-                  height: 100,
-                  width: 60,
-                  child: Image.asset(
-                    'assets/profile-icon-png-899 (1).png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                title: Text('sanjo'),
-                subtitle: Text('7034612195'),
+                    decoration: BoxDecoration(
+                        color: cmainwhite,
+                        borderRadius: BorderRadius.circular(10)),
+                    height: 100,
+                    width: 60,
+                    child: Icon(Icons.food_bank)),
+                title: Text('Arabien Majlis'),
+                subtitle: Text('Palarivettam, Kochi'),
               ),
             ),
           ),

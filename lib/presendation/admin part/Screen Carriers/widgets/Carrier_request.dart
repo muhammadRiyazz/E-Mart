@@ -6,8 +6,8 @@ import 'package:simple_shadow/simple_shadow.dart';
 
 import '../../Screen Carrier Details/Screen_Carrier_Details.dart';
 
-class Carriers extends StatelessWidget {
-  const Carriers({super.key});
+class CarriersRequests extends StatelessWidget {
+  const CarriersRequests({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,19 @@ class Carriers extends StatelessWidget {
                     },
                   ));
                 },
-
+                trailing: TextButton(
+                    onPressed: () {},
+                    child: Container(
+                        decoration: BoxDecoration(
+                            color: cmain,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Accept',
+                            style: TextStyle(color: cwhite),
+                          ),
+                        ))),
                 //  contentPadding: EdgeInsets.zero,
                 leading: Container(
                   decoration: BoxDecoration(
