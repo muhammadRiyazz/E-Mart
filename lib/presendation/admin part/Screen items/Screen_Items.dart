@@ -1,3 +1,4 @@
+import 'package:emart/presendation/admin%20part/Screen%20items/Widget/Product_part.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -5,6 +6,7 @@ import 'package:simple_shadow/simple_shadow.dart';
 
 import '../../../core/constands/colors.dart';
 import '../Screen add items/screen_add_items.dart';
+import '../screen item Details/Screen_item_Details.dart';
 
 class ScreenItems extends StatelessWidget {
   const ScreenItems({super.key});
@@ -43,43 +45,7 @@ class ScreenItems extends StatelessWidget {
                     color: cblack,
                   )),
             ),
-            Expanded(
-              child: GridView.count(
-                  childAspectRatio: 1,
-                  mainAxisSpacing: 15,
-                  crossAxisSpacing: 15,
-                  crossAxisCount: 2,
-                  children: List.generate(10, (index) {
-                    return SimpleShadow(
-                      opacity: 0.2,
-                      child: Container(
-                        height: double.maxFinite,
-                        width: double.maxFinite,
-                        decoration: BoxDecoration(
-                            color: cwhite,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(
-                                child: Image.asset(
-                                  'assets/Grilled-Food-PNG-Transparent-File.png',
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5),
-                                child: Text('Pizza'),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  })),
-            ),
+            ProductPart(),
           ],
         ),
       )),

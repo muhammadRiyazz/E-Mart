@@ -13,14 +13,14 @@ class MiddleTextsPart extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Chicken Burger',
             style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 2,
           ),
-          Text(
+          const Text(
             '₹299',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
           ),

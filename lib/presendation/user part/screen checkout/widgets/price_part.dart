@@ -32,7 +32,7 @@ class PricePart extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 12, horizontal: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       'Total',
                       style: TextStyle(color: cgrey, fontSize: 18),
