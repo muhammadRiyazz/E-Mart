@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import '../../Delivery part/Screen Carrier Sign In/carrier_login.dart';
+import '../../Hotels Part/Screen Hotel sign in/hotel_signin.dart';
 import '../screen sign up/screen_signup.dart';
 
 class ScreenIntroHome extends StatelessWidget {
@@ -23,7 +25,61 @@ class ScreenIntroHome extends StatelessWidget {
               Center(
                   child: Padding(
                 padding: const EdgeInsets.all(0.0),
-                child: Image.asset('assets/log in.png'),
+                child: Stack(
+                  children: [
+                    Container(
+                        width: double.infinity,
+                        child: Center(child: Image.asset('assets/log in.png'))),
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return ScreenCarrierLogin();
+                            },
+                          ));
+                        },
+                        child: Container(
+                            decoration: BoxDecoration(
+                                color: cmain,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.delivery_dining_rounded,
+                                color: cwhite,
+                              ),
+                            )),
+                      ),
+                    ),
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return ScreenHotelLogin();
+                            },
+                          ));
+                        },
+                        child: Container(
+                            decoration: BoxDecoration(
+                                color: cmain,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.food_bank,
+                                color: cwhite,
+                              ),
+                            )),
+                      ),
+                    ),
+                  ],
+                ),
               )),
               const Text(
                 "Let's you in",

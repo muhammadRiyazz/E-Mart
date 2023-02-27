@@ -106,7 +106,7 @@ class HotelDetails extends StatelessWidget {
                         child: Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                            children: const [
                               Text(
                                 'View License',
                                 style: TextStyle(color: cblack, fontSize: 15),

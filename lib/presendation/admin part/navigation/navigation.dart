@@ -45,8 +45,10 @@ class NavigationAdmin extends StatelessWidget {
                 BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
                 BottomNavigationBarItem(
                     label: 'Oeder', icon: Icon(Icons.shopping_cart)),
-                BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
-                BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
+                BottomNavigationBarItem(
+                    label: 'Carrier', icon: Icon(Icons.person)),
+                BottomNavigationBarItem(
+                    label: 'Hotels', icon: Icon(Icons.food_bank)),
               ]),
         );
       },

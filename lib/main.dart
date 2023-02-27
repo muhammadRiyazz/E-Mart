@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: NavigationAdmin(),
+      home: ScreenSplash(),
     );
   }
 }

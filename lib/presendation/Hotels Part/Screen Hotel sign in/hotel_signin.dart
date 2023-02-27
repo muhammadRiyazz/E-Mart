@@ -1,3 +1,5 @@
+import 'package:emart/presendation/Delivery%20part/Screen%20Carrier%20Sign%20In/widget/Carrier_login_field.dart';
+import 'package:emart/presendation/Hotels%20Part/Screen%20Hotel%20sign%20in/widget/hotel_login_field.dart';
 import 'package:emart/presendation/intro%20screens/screen%20login.dart/widget/Textfield.dart';
 import 'package:emart/presendation/intro%20screens/screen%20sign%20up/screen_signup.dart';
 import 'package:emart/presendation/intro%20screens/widgets/Or_Divider.dart';
@@ -8,11 +10,12 @@ import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../../core/constands/colors.dart';
 import '../../user part/Navigation/navigation.dart';
+import '../screen hotel Registration/hotel_registration.dart';
 
-class ScreenLogin extends StatelessWidget {
-  ScreenLogin({super.key});
+class ScreenHotelLogin extends StatelessWidget {
+  ScreenHotelLogin({super.key});
 
-  final TextEditingController emailcontroller = TextEditingController();
+  final TextEditingController namecontroller = TextEditingController();
   final TextEditingController passwordcontroller = TextEditingController();
 
   @override
@@ -46,14 +49,14 @@ class ScreenLogin extends StatelessWidget {
                         ],
                       ),
                     ),
-                    TextFieldsLogin(
-                        icon: const Icon(Icons.email),
-                        controller: emailcontroller,
+                    TextFieldsHotelLogin(
+                        icon: const Icon(Icons.person),
+                        controller: namecontroller,
                         title: 'User Email'),
-                    const SizedBox(
+                    SizedBox(
                       height: 15,
                     ),
-                    TextFieldsLogin(
+                    TextFieldsHotelLogin(
                         icon: const Icon(Icons.key_outlined),
                         controller: passwordcontroller,
                         title: 'Password'),
@@ -91,27 +94,6 @@ class ScreenLogin extends StatelessWidget {
                             style: TextStyle(color: cwhite),
                           ))),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: OrDivider(text: 'Or Continue with'),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          AccountIcon(
-                              img: 'assets/Facebook_Logo_(2019).png',
-                              ontap: () {}),
-                          AccountIcon(
-                              img: 'assets/google-logo-9808.png', ontap: () {}),
-                          AccountIcon(
-                            img: 'assets/png-apple-logo-9711.png',
-                            ontap: () {},
-                          )
-                        ],
-                      ),
-                    ),
                     Align(
                       alignment: Alignment.center,
                       child: Padding(
@@ -125,15 +107,17 @@ class ScreenLogin extends StatelessWidget {
                             ),
                             InkWell(
                               onTap: () {
-                                Navigator.pushAndRemoveUntil(context,
-                                    MaterialPageRoute(
-                                  builder: (context) {
-                                    return ScreenSignUp();
-                                  },
-                                ), (route) => false);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return ScreenHotelRegistration();
+                                    },
+                                  ),
+                                );
                               },
                               child: const Text(
-                                ' Sign Up',
+                                ' Register',
                                 style:
                                     TextStyle(fontSize: 16, color: ontaptext),
                               ),

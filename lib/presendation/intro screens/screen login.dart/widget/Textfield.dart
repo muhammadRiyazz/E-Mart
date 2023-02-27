@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constands/colors.dart';
 
-class TextFielsLogin extends StatelessWidget {
-  const TextFielsLogin(
+class TextFieldsLogin extends StatelessWidget {
+  const TextFieldsLogin(
       {super.key,
       required this.controller,
       required this.title,
